@@ -199,7 +199,8 @@ func (s *Statistics) WorkOrderCount(c *gin.Context) (countList map[string]int, e
 		} else if i == 3 {
 			countList["related"] = result.(*pagination.Paginator).TotalCount
 		} else if i == 4 {
-			countList["all"] = result.(*pagination.Paginator).TotalCount
+			//countList["all"] = result.(*pagination.Paginator).TotalCount
+			countList["all"] = 0
 		}
 	}
 

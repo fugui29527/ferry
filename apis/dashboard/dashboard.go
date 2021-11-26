@@ -53,11 +53,11 @@ func InitData(c *gin.Context) {
 	}
 
 	// 查询工单数据排名
-	ranks, err = statistics.WorkOrderRanks()
-	if err != nil {
-		app.Error(c, -1, err, "查询提交工单排名数据失败")
-		return
-	}
+	//ranks, err = statistics.WorkOrderRanks()
+	//if err != nil {
+	//	app.Error(c, -1, err, "查询提交工单排名数据失败")
+	//	return
+	//}
 
 	// 工单提交数据统计
 	submit, err = statistics.DateRangeStatistics()
@@ -66,19 +66,19 @@ func InitData(c *gin.Context) {
 		return
 	}
 
-	// 处理工单人员排行榜
-	handle, err = statistics.HandlePersonRank()
-	if err != nil {
-		app.Error(c, -1, err, "查询处理工单人员排行失败")
-		return
-	}
+	//// 处理工单人员排行榜
+	//handle, err = statistics.HandlePersonRank()
+	//if err != nil {
+	//	app.Error(c, -1, err, "查询处理工单人员排行失败")
+	//	return
+	//}
 
-	// 工单处理耗时排行榜
-	period, err = statistics.HandlePeriodRank()
-	if err != nil {
-		app.Error(c, -1, err, "查询工单处理耗时排行失败")
-		return
-	}
+	//// 工单处理耗时排行榜
+	//period, err = statistics.HandlePeriodRank()
+	//if err != nil {
+	//	app.Error(c, -1, err, "查询工单处理耗时排行失败")
+	//	return
+	//}
 
 	app.OK(c, map[string]interface{}{
 		"count":  count,
