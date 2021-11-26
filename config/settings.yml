@@ -12,11 +12,11 @@ settings:
     writertimeout: 2
   database:
     dbtype: mysql
-    host: ferry_mysql
+    host: 172.31.21.130
     name: ferry
-    password: 123456
+    password: Qiutx123456@
     port: 3306
-    username: root
+    username: score
   domain:
     gethost: 1
     url: localhost:9527
@@ -25,7 +25,7 @@ settings:
     host: smtp.163.com
     pass: your password
     port: 465
-    user: fdevops@163.com
+    user: 123@163.com
   gorm:
     logmode: 0
     maxidleconn: 0
@@ -55,7 +55,7 @@ settings:
   public:
     islocation: 0
   redis:
-    url: redis://ferry_redis:6379
+    url: redis://miyou123456@127.0.0.1:6379/1
   ssl:
     key: keystring
     pem: temp/pem.pem
